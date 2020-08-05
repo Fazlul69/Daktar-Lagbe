@@ -9,9 +9,14 @@ import android.graphics.drawable.AnimatedVectorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class PhoneActivity extends AppCompatActivity {
 
@@ -22,6 +27,8 @@ public class PhoneActivity extends AppCompatActivity {
     int logoChangeImage = R.drawable.logonumber;
     int width = 230;
     int height = 230;
+    Animation btnMove;
+    Timer timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +41,11 @@ public class PhoneActivity extends AppCompatActivity {
 
         previousBtn = findViewById(R.id.previousBtn);
         nextBtn = findViewById(R.id.nextBtn);
+
+        btnMove = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.button_move);
+
+        timer = new Timer();
 
         final LinearLayout.LayoutParams ip =new LinearLayout.LayoutParams(width,height);
 
@@ -60,8 +72,14 @@ public class PhoneActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nextBtn.setBackgroundResource(R.drawable.color_arrow);
-                Intent next = new Intent(PhoneActivity.this,OtpActivity.class);
-                startActivity(next);
+                nextBtn.startAnimation(btnMove);
+                timer.schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        Intent next = new Intent(PhoneActivity.this,OtpActivity.class);
+                        startActivity(next);
+                    }
+                },4000);
             }
         });
     }
