@@ -6,6 +6,7 @@ import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.AnimatedVectorDrawable;
+import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +30,8 @@ public class PhoneActivity extends AppCompatActivity {
     int height = 230;
     Animation btnMove;
     Timer timer;
+    ImageView loadingAnim;
+    AnimationDrawable frameAnimation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,9 @@ public class PhoneActivity extends AppCompatActivity {
                 R.anim.button_move);
 
         timer = new Timer();
+
+        loadingAnim = findViewById(R.id.loadingAnim);
+        loadingAnim.setImageResource(R.drawable.update_anim);
 
         final LinearLayout.LayoutParams ip =new LinearLayout.LayoutParams(width,height);
 
@@ -71,15 +77,17 @@ public class PhoneActivity extends AppCompatActivity {
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nextBtn.setBackgroundResource(R.drawable.color_arrow);
+                /*nextBtn.setBackgroundResource(R.drawable.color_arrow);*/
                 nextBtn.startAnimation(btnMove);
                 timer.schedule(new TimerTask() {
                     @Override
                     public void run() {
-                        Intent next = new Intent(PhoneActivity.this,OtpActivity.class);
-                        startActivity(next);
+                        frameAnimation = (AnimationDrawable)loadingAnim.getDrawable();
+                        frameAnimation.start();
                     }
                 },4000);
+                Intent next = new Intent(PhoneActivity.this,OtpActivity.class);
+                startActivity(next);
             }
         });
     }
