@@ -2,8 +2,16 @@
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android"
 android:oneshot="false">
     <!-- FALSE continuous cholbe a1 to a8.true dile a1 to a8 akber chole off hoye jabe-->
-    <item android:drawable="@drawable/updated1" android:duration="200" /> <!-- 200 mini sec -->
-    <item android:drawable="@drawable/updated" android:duration="200" />
-    <item android:drawable="@drawable/updatedcolor1" android:duration="200" />
-    <item android:drawable="@drawable/updatedcolor" android:duration="200" />
+    <item android:drawable="@drawable/cir1" android:duration="100" /> <!-- 200 mini sec -->
+    <item android:drawable="@drawable/cir2" android:duration="100" />
+    <item android:drawable="@drawable/cir3" android:duration="100" /> <!-- 200 mini sec -->
+    <item android:drawable="@drawable/cir4" android:duration="100" />
+    <item android:drawable="@drawable/cir1" android:duration="100" />
+    <item android:drawable="@drawable/cir5" android:duration="100" />
+    <item android:drawable="@drawable/cir6" android:duration="100" />
+    <item android:drawable="@drawable/cir6" android:duration="100" />
+    <item android:drawable="@drawable/cir7" android:duration="100" />
+    <item android:drawable="@drawable/cir8" android:duration="100" />
+    <item android:drawable="@drawable/cir7" android:duration="100" />
+    <item android:drawable="@drawable/cir6" android:duration="100" />
 </animation-list>

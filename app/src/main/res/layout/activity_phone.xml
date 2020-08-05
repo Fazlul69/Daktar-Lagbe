@@ -10,7 +10,7 @@
         android:id="@+id/loadingAnim"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/update_anim"
+        android:src="@drawable/cir1"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="247dp" />
