@@ -2,16 +2,17 @@
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android"
 android:oneshot="false">
     <!-- FALSE continuous cholbe a1 to a8.true dile a1 to a8 akber chole off hoye jabe-->
-    <item android:drawable="@drawable/cir1" android:duration="100" /> <!-- 200 mini sec -->
-    <item android:drawable="@drawable/cir2" android:duration="100" />
-    <item android:drawable="@drawable/cir3" android:duration="100" /> <!-- 200 mini sec -->
-    <item android:drawable="@drawable/cir4" android:duration="100" />
-    <item android:drawable="@drawable/cir1" android:duration="100" />
-    <item android:drawable="@drawable/cir5" android:duration="100" />
-    <item android:drawable="@drawable/cir6" android:duration="100" />
-    <item android:drawable="@drawable/cir6" android:duration="100" />
-    <item android:drawable="@drawable/cir7" android:duration="100" />
-    <item android:drawable="@drawable/cir8" android:duration="100" />
-    <item android:drawable="@drawable/cir7" android:duration="100" />
-    <item android:drawable="@drawable/cir6" android:duration="100" />
+    <item android:drawable="@drawable/cir1" android:duration="150" /> <!-- 200 mini sec -->
+    <item android:drawable="@drawable/cir2" android:duration="150" />
+    <item android:drawable="@drawable/cir3" android:duration="150" /> <!-- 200 mini sec -->
+    <item android:drawable="@drawable/cir4" android:duration="150" />
+    <item android:drawable="@drawable/cir5" android:duration="150" />
+    <item android:drawable="@drawable/cir7" android:duration="150" />
+    <item android:drawable="@drawable/cir8" android:duration="150" />
+    <item android:drawable="@drawable/cir9" android:duration="150" />
+    <item android:drawable="@drawable/cir10" android:duration="150" />
+    <item android:drawable="@drawable/cir11" android:duration="150" />
+    <item android:drawable="@drawable/cir12" android:duration="150" />
+    <item android:drawable="@drawable/cir13" android:duration="150" />
+    <item android:drawable="@drawable/cir13" android:duration="0" />
 </animation-list>

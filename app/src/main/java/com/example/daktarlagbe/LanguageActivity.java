@@ -37,16 +37,32 @@ public class LanguageActivity extends AppCompatActivity {
         engBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                engBtn.setBackgroundColor(Color.parseColor("#00E2FC"));
+                engBtn.setBackgroundResource(R.drawable.selected_btn_background);
                 engBtn.setTextColor(Color.parseColor("#ffffff"));
+                nextBtn.setBackgroundResource(R.drawable.color_arrow);
+                nextBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent next = new Intent(LanguageActivity.this,PhoneActivity.class);
+                        startActivity(next);
+                    }
+                });
             }
         });
 
         banglgaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                banglgaBtn.setBackgroundColor(Color.parseColor("#00E2FC"));
+                banglgaBtn.setBackgroundResource(R.drawable.selected_btn_background);
                 banglgaBtn.setTextColor(Color.parseColor("#ffffff"));
+                nextBtn.setBackgroundResource(R.drawable.color_arrow);
+                nextBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent next = new Intent(LanguageActivity.this,PhoneActivity.class);
+                        startActivity(next);
+                    }
+                });
             }
         });
 
@@ -59,13 +75,6 @@ public class LanguageActivity extends AppCompatActivity {
             }
         });
 
-        nextBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                nextBtn.setBackgroundResource(R.drawable.color_arrow);
-                Intent next = new Intent(LanguageActivity.this,PhoneActivity.class);
-                startActivity(next);
-            }
-        });
+
     }
 }
