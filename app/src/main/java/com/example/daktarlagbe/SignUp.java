@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,6 +17,7 @@ import java.util.TimerTask;
 
 public class SignUp extends AppCompatActivity {
 
+    EditText userName, age;
     TextView gMale,gFemale;
     ImageView previousBtn, nextBtn;
     Animation btnMove;
@@ -25,6 +27,9 @@ public class SignUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
+        userName = findViewById(R.id.userName);
+        age = findViewById(R.id.age);
 
         gMale = findViewById(R.id.gMale);
         gFemale = findViewById(R.id.gFemale);
@@ -40,6 +45,7 @@ public class SignUp extends AppCompatActivity {
         gMale.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                gFemale.setEnabled(false);
                 gMale.setBackgroundResource(R.drawable.selected_btn_background);
                 gMale.setTextColor(Color.parseColor("#ffffff"));
             }
@@ -47,10 +53,29 @@ public class SignUp extends AppCompatActivity {
         gFemale.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                gMale.setEnabled(false);
                 gFemale.setBackgroundResource(R.drawable.selected_btn_background);
                 gFemale.setTextColor(Color.parseColor("#ffffff"));
             }
         });
+
+        /*if(!userName.getText().toString().isEmpty() && !age.getText().toString().isEmpty()){
+            nextBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    nextBtn.startAnimation(btnMove);
+                    timer.schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            Intent next = new Intent(SignUp.this,SignUpComplete.class);
+                            startActivity(next);
+                        }
+                    },2000);
+                }
+            });
+        }else {
+            nextBtn.setEnabled(false);
+        }*/
 
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,8 +84,6 @@ public class SignUp extends AppCompatActivity {
                 timer.schedule(new TimerTask() {
                     @Override
                     public void run() {
-                      /*  frameAnimation = (AnimationDrawable)loadingAnim.getDrawable();
-                        frameAnimation.start();*/
                         Intent next = new Intent(SignUp.this,SignUpComplete.class);
                         startActivity(next);
                     }

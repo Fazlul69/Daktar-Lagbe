@@ -37,6 +37,7 @@ public class LanguageActivity extends AppCompatActivity {
         engBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                banglgaBtn.setEnabled(false);
                 engBtn.setBackgroundResource(R.drawable.selected_btn_background);
                 engBtn.setTextColor(Color.parseColor("#ffffff"));
                 nextBtn.setBackgroundResource(R.drawable.color_arrow);
@@ -53,6 +54,7 @@ public class LanguageActivity extends AppCompatActivity {
         banglgaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                engBtn.setEnabled(false);
                 banglgaBtn.setBackgroundResource(R.drawable.selected_btn_background);
                 banglgaBtn.setTextColor(Color.parseColor("#ffffff"));
                 nextBtn.setBackgroundResource(R.drawable.color_arrow);
