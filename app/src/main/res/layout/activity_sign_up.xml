@@ -38,6 +38,7 @@
                 android:layout_marginTop="40dp"/>
 
             <EditText
+                android:id="@+id/userName"
                 android:layout_width="210dp"
                 android:layout_height="50dp"
                 android:textColor="#00F5EE"
@@ -66,6 +67,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
+                    android:id="@+id/gMale"
                     android:layout_width="105dp"
                     android:layout_height="60dp"
                     android:layout_marginLeft="36dp"
@@ -76,6 +78,7 @@
                     android:gravity="center"
                     android:background="@drawable/otp_style"/>
                 <TextView
+                    android:id="@+id/gFemale"
                     android:layout_width="105dp"
                     android:layout_height="60dp"
                     android:layout_marginLeft="36dp"
@@ -97,10 +100,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="30dp"
-                android:text="Gender: "
+                android:text="Age: "
                 android:textColor="#B6B6B6"
                 android:textSize="16sp" />
             <EditText
+                android:id="@+id/age"
                 android:layout_width="105dp"
                 android:layout_height="60dp"
                 android:layout_marginLeft="36dp"
