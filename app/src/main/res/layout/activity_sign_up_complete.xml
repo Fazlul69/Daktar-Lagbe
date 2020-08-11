@@ -6,4 +6,78 @@
     android:layout_height="match_parent"
     tools:context=".SignUpComplete">
 
+    <TextView
+        android:id="@+id/textOneAnim"
+        android:layout_width="128dp"
+        android:layout_height="149dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="245dp"
+        android:layout_marginRight="245dp"
+        android:text="@string/sflashInfo1"
+        android:textColor="#00F5EE"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageanim"
+        android:layout_marginTop="220dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/leftAnimImage"
+            android:layout_width="470dp"
+            android:layout_height="149dp"
+            android:layout_marginLeft="-20dp"
+            android:src="@drawable/leftside" />
+
+        <ImageView
+            android:id="@+id/rightAnimImage"
+            android:layout_width="470dp"
+            android:layout_height="149dp"
+            android:layout_marginLeft="-40dp"
+            android:layout_marginTop="-60dp"
+            android:src="@drawable/rightside" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/textTwoAnim"
+        android:layout_width="145dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="209dp"
+        android:layout_marginLeft="209dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginRight="72dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageanim">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="One tap"
+            android:textColor="#00F5EE"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="to find all near you"
+            android:textColor="#00F5EE"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

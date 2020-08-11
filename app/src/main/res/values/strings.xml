@@ -13,4 +13,5 @@
     <string name="english">English</string>
     <string name="bangla">বাংলা</string>
     <string name="phn_warning">Please Enter Your Phone Number</string>
+    <string name="sflashInfo1">Search, doctors, clinics, hospitals</string>
 </resources>
