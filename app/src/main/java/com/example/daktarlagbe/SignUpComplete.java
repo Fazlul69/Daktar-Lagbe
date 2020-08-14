@@ -45,7 +45,7 @@ public class SignUpComplete extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SignUpComplete.this, MainActivity.class);
+                Intent intent = new Intent(SignUpComplete.this, MapsActivity.class);
                 startActivity(intent);
                 finish();
             }
