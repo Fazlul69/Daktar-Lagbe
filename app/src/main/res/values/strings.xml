@@ -23,4 +23,10 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="utilities">Utilities</string>
     <string name="title_activity_maps">Map</string>
+    <string name="all">All</string>
+    <string name="allimage">allImage</string>
+    <string name="lineimage">lineImage</string>
+    <string name="doctors">Doctors</string>
+    <string name="clinics">Clinics</string>
+    <string name="hospitals">Hospitals</string>
 </resources>
