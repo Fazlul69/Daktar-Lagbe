@@ -29,4 +29,6 @@
     <string name="doctors">Doctors</string>
     <string name="clinics">Clinics</string>
     <string name="hospitals">Hospitals</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="search">Search</string>
 </resources>

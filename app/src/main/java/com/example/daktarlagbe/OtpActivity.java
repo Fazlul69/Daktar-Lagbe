@@ -45,7 +45,7 @@ public class OtpActivity extends AppCompatActivity {
                         Intent next = new Intent(OtpActivity.this,SignUp.class);
                         startActivity(next);
                     }
-                },2000);
+                },1500);
             }
         });
 

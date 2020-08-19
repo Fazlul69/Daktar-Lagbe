@@ -82,12 +82,10 @@ public class PhoneActivity extends AppCompatActivity {
                             timer.schedule(new TimerTask() {
                                 @Override
                                 public void run() {
-                      /*  frameAnimation = (AnimationDrawable)loadingAnim.getDrawable();
-                        frameAnimation.start();*/
                                     Intent next = new Intent(PhoneActivity.this,OtpActivity.class);
                                     startActivity(next);
                                 }
-                            },2000);
+                            },1500);
                         }
                     });
                 }
@@ -103,9 +101,6 @@ public class PhoneActivity extends AppCompatActivity {
                 startActivity(preview);
             }
         });
-
-
-
 
 
     }

@@ -89,7 +89,7 @@ public class SignUp extends AppCompatActivity {
                         Intent next = new Intent(SignUp.this,SignUpComplete.class);
                         startActivity(next);
                     }
-                },2000);
+                },1500);
             }
         });
 

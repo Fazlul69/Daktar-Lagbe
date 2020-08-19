@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MapsActivity" >
+    tools:context=".MapsActivity">
 
     <fragment
         android:layout_width="match_parent"
@@ -27,24 +27,40 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
                 android:src="@drawable/search"
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"/>
+
             <EditText
                 android:id="@+id/search"
-                android:layout_width="150dp"
+                android:layout_width="145dp"
                 android:layout_height="wrap_content"
-                android:hint="Search"/>
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:hint="@string/search" />
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+            <Spinner
+                android:id="@+id/all_search_spinner"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/all_back"/>
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="9dp"
+                android:src="@drawable/spinner_arrow"
+                android:layout_marginLeft="-25dp"
+                android:layout_marginTop="15dp"/>
+        </LinearLayout>
 
-        <ImageView
-            android:id="@+id/selector"
-            android:layout_width="68dp"
-            android:layout_height="50dp"
-            android:src="@drawable/all_with_back"/>
 
     </LinearLayout>
 
