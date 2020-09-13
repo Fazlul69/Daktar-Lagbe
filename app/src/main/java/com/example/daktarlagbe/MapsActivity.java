@@ -1,16 +1,16 @@
 package com.example.daktarlagbe;
 
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.provider.CalendarContract;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.daktarlagbe.adapter.SpinnerAdapter;
+import com.example.daktarlagbe.model.LocationSpinnerModel;
 import com.example.daktarlagbe.model.SpinnerModel;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -18,17 +18,27 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
+    //spinner
     private ArrayList<SpinnerModel>spinnerModelArrayList;
     private SpinnerAdapter spinnerAdapter;
-
     TextView fieldName;
+
+    //locationspinner
+   /* private ArrayList<LocationSpinnerModel>locationSpinnerModelArrayList;
+    private LocationSpinnerAdapter locationSpinnerAdapter;
+    DropDownView locationNameDropDown;*/
+   //bottomNav
+    private ChipNavigationBar bottom_nav;
+    private Fragment fragment = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +49,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        bottom_nav = findViewById(R.id.bottom_nav);
         //spinner
         fieldName = findViewById(R.id.fieldName);
 
@@ -77,8 +88,60 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             }
         });
-    }
         //spinner end
+
+        //location name spinner
+     /*   locationNameDropDown = findViewById(R.id.locationNameDropDOwn);
+
+     *//*   locationSpinnerModelArrayList = new ArrayList<>();
+        locationSpinnerModelArrayList.add(new LocationSpinnerModel("Gulshan"));
+        locationSpinnerModelArrayList.add(new LocationSpinnerModel("Banani"));
+
+        locationSpinnerAdapter = new LocationSpinnerAdapter(this,locationSpinnerModelArrayList);
+        locationNameDropDown.setDropDownListItem(locationSpinnerAdapter);*//*
+        locationNameDropDown.setDropDownListItem(generateFilterList());
+        locationNameDropDown.setOnSelectionListener(new OnDropDownSelectionListener() {
+            @Override
+            public void onItemSelected(DropDownView dropDownView, int position) {
+
+            }
+        });*/
+        //location  name spinner end
+
+        //Bottom Navigation
+
+        bottom_nav.setItemSelected(R.id.home, true);
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new MapsActivity()).commit();
+        bottom_nav.setOnItemSelectedListener(new ChipNavigationBar.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(int i) {
+                switch (i){
+                    case R.id.menu:
+                        fragment = new MenuFragment();
+                        break;
+                    case R.id.home:
+                        
+
+
+                    case R.id.profile:
+                        fragment = new ProfileFragment();
+                        break;
+                }
+                if(fragment != null){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment). commit();
+                }
+            }
+        });
+    }
+
+  /*  private List<String> generateFilterList() {
+        List<String> list = new ArrayList<>();
+        list.add("All");
+        list.add("odd");
+        list.add("even");
+        return list;
+    }*/
+
 
     @Override
     public void onMapReady(GoogleMap googleMap) {

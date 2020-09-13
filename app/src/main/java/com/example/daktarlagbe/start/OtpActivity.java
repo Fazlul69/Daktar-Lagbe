@@ -1,4 +1,4 @@
-package com.example.daktarlagbe;
+package com.example.daktarlagbe.start;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+
+import com.example.daktarlagbe.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

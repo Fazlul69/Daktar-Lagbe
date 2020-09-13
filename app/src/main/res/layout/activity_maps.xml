@@ -60,9 +60,50 @@
                 android:layout_marginLeft="-25dp"
                 android:layout_marginTop="15dp"/>
         </LinearLayout>
+     <!--   <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp">-->
+
+         <!--   <com.asksira.dropdownview.DropDownView
+                android:id="@+id/locationNameDropDOwn"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                map:expand_include_selected_item="true"
+                map:dropdownItem_text_gravity="start"
+                map:dropDownItem_text_color_selected="@android:color/holo_orange_dark"
+                map:divider_color="@android:color/holo_orange_light"
+                map:dropDownItem_text_size_selected="18sp"
+                map:bottom_decorator_color="@android:color/holo_orange_dark"
+                map:bottom_decorator_height="4dp"
+                map:expansion_style="drawer"
+                map:last_item_has_divider="false"/>-->
+           <!-- <Spinner
+                android:id="@+id/location_spinner"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:dropDownWidth="300dp"
+                android:stateListAnimator="@drawable/location_name_spinner_animation"
+                android:background="@drawable/location_spinner_background" />-->
+    <!--    </LinearLayout>-->
 
 
     </LinearLayout>
 
+
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottomnav"
+        map:cnb_menuResource="@menu/bottom_menu" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_nav"/>
 
 </RelativeLayout>

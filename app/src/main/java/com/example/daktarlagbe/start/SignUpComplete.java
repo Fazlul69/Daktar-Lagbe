@@ -1,4 +1,4 @@
-package com.example.daktarlagbe;
+package com.example.daktarlagbe.start;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.daktarlagbe.MapsActivity;
+import com.example.daktarlagbe.R;
 
 public class SignUpComplete extends AppCompatActivity {
 
